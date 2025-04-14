@@ -23,5 +23,7 @@ def baixarAudio(url, pastaDestino = "downloads"):
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
+            
+    print(f"Áudio salvo em: {caminhoCompleto}")
     
-    return caminhoCompleto + ".mp3"
+    return (caminhoCompleto + ".mp3")
