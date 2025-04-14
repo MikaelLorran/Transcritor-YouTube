@@ -1,0 +1,37 @@
+# Ambientes virtuais
+venv/
+.env/
+.venv/
+
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pastas de saída
+output/
+downloads/
+transcricoes/
+*.webm
+*.mp4
+*.mp3
+*.wav
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configs de IDEs
+.vscode/
+.idea/
+*.code-workspace
