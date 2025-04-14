@@ -1,5 +1,6 @@
 from downloader import baixarAudio
 from transcriber import transcreverAudio
+from exporter import salvarTranscricao
 
 def main():
     
@@ -10,8 +11,8 @@ def main():
     print("\nTranscrevendo o áudio...")
     texto = transcreverAudio(caminho)
     
-    print("\n Transcrição completa:")
-    print(texto)
+    print("\n Exportando texto...")
+    salvarTranscricao(texto)
     
 if __name__ == "__main__":
     main()

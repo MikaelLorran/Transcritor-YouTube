@@ -12,6 +12,7 @@ __pycache__/
 output/
 downloads/
 transcricoes/
+exports/
 *.webm
 *.mp4
 *.mp3
