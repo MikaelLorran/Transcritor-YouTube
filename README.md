@@ -1,88 +1,61 @@
-# Transcriber YouTube
+# 🎙️ Transcritor de Vídeos do YouTube
 
-Este projeto é um transcritor de vídeos do YouTube utilizando Python. O objetivo é baixar o áudio de um vídeo do YouTube e gerar uma transcrição do áudio em formato de texto. O projeto utiliza as bibliotecas `yt-dlp` para o download do áudio e o modelo `whisper` da OpenAI para a transcrição.
+Este projeto permite baixar o áudio de vídeos do YouTube e transcrevê-los automaticamente utilizando Python. A transcrição é salva em um arquivo `.txt`.
 
-## Descrição
+## ✅ Funcionalidades
 
-O **Transcriber YouTube** permite que você baixe o áudio de vídeos do YouTube e converta-o automaticamente em texto, útil para legendas, transcrições e outras aplicações.
+- Baixar o áudio de vídeos do YouTube em MP3
+- Transcrever o áudio automaticamente usando inteligência artificial
+- Salvar a transcrição em um arquivo `.txt`
+- Interface gráfica simples com barra de progresso
 
-## Funcionalidades
+## 🧰 Tecnologias utilizadas
 
-- Baixar áudio de vídeos do YouTube (suporta formatos `webm`).
-- Transcrever áudio utilizando o modelo Whisper da OpenAI.
-- Fácil de configurar e usar.
+- Python 3.11+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [Whisper](https://github.com/openai/whisper)
+- FFmpeg
+- Tkinter (interface gráfica)
 
-## Tecnologias Usadas
+## 🧠 Como usar
 
-- **Python**: Linguagem de programação principal.
-- **yt-dlp**: Biblioteca para baixar vídeos e áudios do YouTube.
-- **Whisper**: Modelo de transcrição de áudio para texto da OpenAI.
-- **ffmpeg**: Utilizado pelo Whisper para processar o áudio.
+1. Clone este repositório:
 
-## Pré-requisitos
+   ```
+   git clone https://github.com/seu-usuario/transcritor-youtube.git
+   cd transcritor-youtube
+   ```
 
-- Python 3.7 ou superior.
-- ffmpeg instalado e configurado no PATH do sistema.
+2. Instale as dependências:
 
-## Instalação
+   ```
+   pip install -r requirements.txt
+   ```
 
-### Passo 1: Clonar o repositório
+3. Verifique se o FFmpeg está instalado e adicionado ao PATH. Ou indique manualmente o caminho no arquivo `downloader.py`.
 
-No terminal, execute o seguinte comando para clonar o repositório:
+4. Execute o aplicativo:
 
-git clone https://github.com/seu-usuario/youtube-transcriber.git
-cd youtube-transcriber
+   ```
+   python app.py
+   ```
 
-### Passo 2: Criar e ativar um ambiente virtual (opcional, mas recomendado)
+## 📁 Estrutura do projeto
 
-Crie um ambiente virtual para instalar as dependências:
+```
+transcritor-youtube/
+│
+├── app.py                # Interface gráfica
+├── downloader.py         # Função de download do YouTube
+├── transcriber.py        # Transcrição com Whisper
+├── exporter.py           # Salvamento da transcrição em .txt
+├── requirements.txt      # Dependências do projeto
+└── downloads/            # Áudios baixados
+└── exports/              # Transcrições geradas
+```
 
-python -m venv venv
-Ative o ambiente virtual:
+## 📦 Exemplo de uso
 
-Windows: venv\Scripts\activate
-
-Linux/Mac: source venv/bin/activate
-
-### Passo 3: Instalar as dependências
-
-Com o ambiente virtual ativado, instale as dependências necessárias:
-
-pip install -r requirements.txt
-As dependências são:
-
-yt-dlp: Para baixar o áudio do YouTube.
-
-whisper: Para transcrever o áudio.
-
-ffmpeg: Para processar arquivos de áudio.
-
-### Passo 4: Instalar o FFmpeg
-
-O FFmpeg é necessário para processar o áudio. Siga os passos abaixo para instalá-lo:
-
-Baixe o FFmpeg em https://ffmpeg.org/download.html.
-
-Extraia o conteúdo do arquivo ZIP.
-
-Adicione o caminho da pasta bin do FFmpeg ao PATH do sistema.
-
-### Passo 5: Rodar o programa
-
-Após instalar as dependências, você pode rodar o programa. No terminal, execute o seguinte comando:
-
-python transcriber.py <URL do vídeo do YouTube>
-Exemplo:
-
-python transcriber.py https://www.youtube.com/watch?v=dQw4w9WgXcQ
-O programa fará o seguinte:
-
-Baixará o áudio do vídeo em formato .webm.
-
-Usará o Whisper para transcrever o áudio em texto.
-
-Exibirá a transcrição no terminal.
-
-### Passo 6: Verifique a transcrição
-
-A transcrição será exibida diretamente no terminal, ou você pode modificá-lo para salvar a transcrição em um arquivo .txt caso prefira.
+1. Insira a URL de um vídeo do YouTube.
+2. Clique em **"Baixar e Transcrever"**.
+3. A transcrição será salva automaticamente na pasta `exports/`.
